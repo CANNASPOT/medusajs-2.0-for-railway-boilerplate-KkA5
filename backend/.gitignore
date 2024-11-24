@@ -28,3 +28,4 @@ build
 !.yarn/versions
 
 .vscode/
+src/admin/lib/config.ts
