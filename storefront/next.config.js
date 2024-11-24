@@ -1,6 +1,6 @@
-const checkEnvVariables = require("./check-env-variables")
+const checkEnvVariables = require("./check-env-variables");
 
-checkEnvVariables()
+checkEnvVariables();
 
 /**
  * @type {import('next').NextConfig}
@@ -15,7 +15,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL?.replace('https://', ''),
+        // Ensure `NEXT_PUBLIC_MEDUSA_BACKEND_URL` is defined and properly formatted
+        hostname: process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
+          ? process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL.replace(/^https?:\/\//, "") // Remove protocol
+          : "example.com", // Fallback hostname to prevent errors
       },
       {
         protocol: "https",
@@ -29,15 +32,23 @@ const nextConfig = {
         protocol: "https",
         hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
       },
-      ...(process.env.NEXT_PUBLIC_MINIO_ENDPOINT ? [{
-        protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_MINIO_ENDPOINT,
-      }] : []),
+      ...(process.env.NEXT_PUBLIC_MINIO_ENDPOINT
+        ? [
+          {
+            protocol: "https",
+            // Ensure `NEXT_PUBLIC_MINIO_ENDPOINT` is defined
+            hostname: process.env.NEXT_PUBLIC_MINIO_ENDPOINT.replace(
+              /^https?:\/\//,
+              "" // Remove protocol if present
+            ),
+          },
+        ]
+        : []), // If undefined, don't add this entry
     ],
   },
   serverRuntimeConfig: {
-    port: process.env.PORT || 3000
-  }
-}
+    port: process.env.PORT || 3000,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
