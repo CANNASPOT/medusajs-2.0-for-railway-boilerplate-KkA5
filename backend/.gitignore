@@ -1,28 +1,55 @@
+# Build output directories
 /dist
-.env
-.DS_Store
-/uploads
-/node_modules
-yarn-error.log
-.medusa-copy
-/.idea
-static
-coverage
+/build
 
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# File uploads
+/uploads
+
+# Node modules
+/node_modules
+
+# Yarn error logs
+yarn-error.log
+
+# Medusa specific files
+.medusa-copy
 .medusa
 
-!src/**
+# IDE specific files
+/.idea
 
+# Static files
+static
+
+# Test coverage reports
+coverage
+
+# TypeScript build info
 ./tsconfig.tsbuildinfo
+
+# Lock files
 # package-lock.json
 yarn.lock
+
+# Database dumps
 medusa-db.sql
-build
+
+# Cache directories
 .cache
 
+# Yarn specific files
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Allow all files in src directory
+!src/**
