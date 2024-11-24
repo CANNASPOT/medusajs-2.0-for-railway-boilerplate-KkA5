@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@medusajs/js-sdk": "^2.0.4",
+    "@medusajs/types": "^2.0.4"
+  }
+}

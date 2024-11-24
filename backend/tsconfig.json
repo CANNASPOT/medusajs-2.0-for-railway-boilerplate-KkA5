@@ -15,7 +15,9 @@
     "rootDir": "./",
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     },
     "jsx": "react-jsx",
     "forceConsistentCasingInFileNames": true,
@@ -25,7 +27,10 @@
   "ts-node": {
     "swc": true
   },
-  "include": ["src", "medusa-config.js"],
+  "include": [
+    "src",
+    "medusa-config.js"
+  ],
   "exclude": [
     "**/__tests__",
     "**/__fixtures__",
