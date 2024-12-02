@@ -1,5 +1,5 @@
 .idea/
-#storefront/
-#/storefront/
+storefront/
+/storefront/
 node_modules
 /node_modules
