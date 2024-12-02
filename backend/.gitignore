@@ -51,5 +51,7 @@ medusa-db.sql
 !.yarn/sdks
 !.yarn/versions
 
+.vscode/
+src/admin/lib/config.ts
 # Allow all files in src directory
 !src/**
