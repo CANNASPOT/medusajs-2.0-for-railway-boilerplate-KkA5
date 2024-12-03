@@ -22,7 +22,7 @@
 
 <h1 align="center">
   Need help?<br>
-  <a href="https://funkyton.com/medusajs-2-0-is-finally-here/">Step by step deploy guide, and video instructions</a>
+  <a href="https://funkyton.com/medusajs-2-0-is-finally-here/">Step by step deploy guide, and video instructions gang</a>
 </h1>
 
 <p align="center">
@@ -90,7 +90,7 @@ Rename `.env.local.template` ->  `.env.local`
 ## Useful resources
 - How to setup credit card payment with Stripe payment module: https://youtu.be/dcSOpIzc1Og
 - https://funkyton.com/medusajs-2-0-is-finally-here/#succuessfully-deployed-whats-next
-  
+
 <p align="center">
   <a href="https://funkyton.com/">
     <div style="text-align: center;">
