@@ -56,7 +56,5 @@ dump.rdb
 /playwright/.cache/
 /playwright/.auth
 .idea/
-storefront/
-/storefront/
 node_modules
 /node_modules
